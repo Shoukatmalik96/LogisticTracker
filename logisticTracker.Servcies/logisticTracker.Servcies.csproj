@@ -50,10 +50,21 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TripsService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\logisticTracker.Data\logisticTracker.Data.csproj">
+      <Project>{4D73702A-4BFE-44F9-8E13-643901CB1E87}</Project>
+      <Name>logisticTracker.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\logisticTracker.Entities\logisticTracker.Entities.csproj">
+      <Project>{AC6F81A4-C524-4BC5-99CC-7B5499D105B6}</Project>
+      <Name>logisticTracker.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
