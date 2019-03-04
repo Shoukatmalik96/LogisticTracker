@@ -6,23 +6,28 @@
 <h2>Create</h2>
 
 <form id="createForm" action="/Trips/Create" method="post">
-
-	<label>Vehicle No</label>
-	<input name="VehicleNo" />
-	<br />
-	<label>LoadingDate</label>
-	<input name="LoadingDate" />
-	<br />
-	<label>KarachiRent</label>
-	<input name="KarachiRent" />
-	<br />
-	<label>Weight Details</label>
-	<input name="Details" />
-	<br />
-	<label>Weight in Tons</label>
-	<input name="Weight" />
-	<br />
-	<button type="button" id="saveButton">Submit</button>
+	<div class="form-group">
+		<label>Vehicle No</label>
+		<input class="form-control" name="VehicleNo" placeholder="Enter Vehicle No" />
+	</div>
+	<div class="form-group">
+		<label>LoadingDate</label>
+		<input class="form-control" name="LoadingDate" placeholder="Eneter Loading Date" />
+	</div>
+	<div class="form-group">
+		<label>KarachiRent</label>
+		<input class="form-control" name="KarachiRent" placeholder="Enter Karachi Rent" />
+	</div>
+	<div class="form-group">
+		<label>Weight Details</label>
+		<input class="form-control" name="Details" placeholder="Enter Weiht Details" />
+	</div>
+	<div class="form-group">
+		<label>Weight in Tons</label>
+		<input class="form-control" name="Weight" placeholder="Enter weight in Tons" />
+	</div>
+	
+	<button id="saveButton" type="button" class="btn btn-success">Save</button>
 </form>
 
 <script>

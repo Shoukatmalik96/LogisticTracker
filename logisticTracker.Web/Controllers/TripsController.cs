@@ -35,7 +35,7 @@ namespace logisticTracker.Web.Controllers
         public ActionResult Edit(int ID)
         {
             var trip = TripsService.GetTripByID(ID);
-            return View(trip);
+            return PartialView(trip);
         }
         [HttpPost]
         public ActionResult Edit(Trip trip)

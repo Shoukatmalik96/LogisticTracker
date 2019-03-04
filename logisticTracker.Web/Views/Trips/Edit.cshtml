@@ -8,22 +8,27 @@
 <form id="editForm" action="/Trips/Edit" method="post">
 
 	<input type="hidden" name="ID" value="@Model.ID" />
-	<label>Vehicle No</label>
-	<input name="VehicleNo" value="@Model.VehicleNo" />
-	<br />
-	<label>LoadingDate</label>
-	<input name="LoadingDate" value="@Model.loadingDate" />
-	<br />
-	<label>KarachiRent</label>
-	<input name="KarachiRent" value="@Model.KarachiRent" />
-	<br />
-	<label>Weight Details</label>
-	<input name="Details" value="@Model.Details" />
-	<br />
-	<label>Weight in Tons</label>
-	<input name="Weight" value="@Model.Weight" />
-	<br />
-	<button id="saveButton">Submit</button>
+	<div class="form-group">
+		<label>Vehicle No</label>
+		<input class="form-control" name="VehicleNo" value="@Model.VehicleNo" />
+	</div>
+	<div class="form-group">
+		<label>LoadingDate</label>
+		<input class="form-control" name="LoadingDate" value="@Model.loadingDate" />
+	</div>
+	<div class="form-group">
+		<label>KarachiRent</label>
+		<input class="form-control" name="KarachiRent" value="@Model.KarachiRent" />
+	</div>
+	<div class="form-group">
+		<label>Weight Details</label>
+		<input class="form-control" name="Details" value="@Model.Details" />
+	</div>
+	<div class="form-group">
+		<label>Weight in Tons</label>
+		<input class="form-control" name="Weight" value="@Model.Weight" />
+	</div>
+	<button id="saveButton" type="button" class="btn btn-success">Save</button>
 </form>
 
 <script>
