@@ -1,0 +1,44 @@
+﻿@model logisticTracker.Entities.Trip
+@{
+	ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+<form id="editForm" action="/Trips/Edit" method="post">
+
+	<input type="hidden" name="ID" value="@Model.ID" />
+	<label>Vehicle No</label>
+	<input name="VehicleNo" value="@Model.VehicleNo" />
+	<br />
+	<label>LoadingDate</label>
+	<input name="LoadingDate" value="@Model.loadingDate" />
+	<br />
+	<label>KarachiRent</label>
+	<input name="KarachiRent" value="@Model.KarachiRent" />
+	<br />
+	<label>Weight Details</label>
+	<input name="Details" value="@Model.Details" />
+	<br />
+	<label>Weight in Tons</label>
+	<input name="Weight" value="@Model.Weight" />
+	<br />
+	<button id="saveButton">Submit</button>
+</form>
+
+<script>
+
+	$("#saveButton").click(function () {
+
+			$.ajax({
+				url: "@Url.Action("Edit", "Trips")",
+				type: "post",
+				data: $("#editForm").serialize()
+			}).done(function (response) {
+
+				$("#listingArea").html(response);
+				window.location.reload();
+			});
+	});
+
+</script>

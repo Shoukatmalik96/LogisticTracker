@@ -11,6 +11,7 @@ namespace logisticTracker.Servcies
     public class TripsService
     {
         LogisticTrackerDataContext context = new LogisticTrackerDataContext();
+		
 
         public Trip GetTripByID(int ID)
         {
@@ -23,17 +24,18 @@ namespace logisticTracker.Servcies
         public void SaveTrip(Trip trip)
         {
             context.Trips.Add(trip);
-            context.SaveChanges();
-        }
+			context.SaveChanges();
+
+		}
         public void UpdateTrip(Trip trip)
         {
             context.Entry(trip).State =System.Data.Entity.EntityState.Modified;
-            context.SaveChanges();
-        }
+			context.SaveChanges();
+		}
         public void DeleteTrip(Trip trip)
         {
             context.Entry(trip).State = System.Data.Entity.EntityState.Deleted;
-            context.SaveChanges();
-        }
+			context.SaveChanges();
+		}
     }
 }

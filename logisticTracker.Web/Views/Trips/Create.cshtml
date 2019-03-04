@@ -1,0 +1,44 @@
+﻿
+@{
+	ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+<form id="createForm" action="/Trips/Create" method="post">
+
+	<label>Vehicle No</label>
+	<input name="VehicleNo" />
+	<br />
+	<label>LoadingDate</label>
+	<input name="LoadingDate" />
+	<br />
+	<label>KarachiRent</label>
+	<input name="KarachiRent" />
+	<br />
+	<label>Weight Details</label>
+	<input name="Details" />
+	<br />
+	<label>Weight in Tons</label>
+	<input name="Weight" />
+	<br />
+	<button type="button" id="saveButton">Submit</button>
+</form>
+
+<script>
+
+	$("#saveButton").click(function () {
+
+			$.ajax({
+				url: "@Url.Action("Create", "Trips")",
+				type: "post",
+				data: $("#createForm").serialize()
+			}).done(function (response) {
+
+				$("#listingArea").html(response);
+				window.location.reload();
+			});
+	});
+
+</script>
+

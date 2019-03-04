@@ -1,0 +1,14 @@
+﻿@model logisticTracker.Entities.Trip
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h2>Are you sure you want to delete this record !</h2>
+<form action="/Trips/Delete" method="post">
+
+	<input type="hidden" name="ID" value='@Model.ID' />
+	
+	<button>Submit</button>
+</form>

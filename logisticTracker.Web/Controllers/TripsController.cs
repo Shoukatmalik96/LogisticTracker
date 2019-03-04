@@ -1,5 +1,6 @@
 ﻿using logisticTracker.Entities;
 using logisticTracker.Servcies;
+using logisticTracker.Web.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,18 +15,21 @@ namespace logisticTracker.Web.Controllers
 
         public ActionResult Index()
         {
-            return View();
+			TripListingViewModels model = new TripListingViewModels();
+
+			model.Trips = TripsService.GetTrips();
+			return View(model);
         }
         [HttpGet]
         public ActionResult Create()
         {
-            return View();
+            return PartialView();
         }
         [HttpPost]
         public ActionResult Create(Trip trip)
         {
             TripsService.SaveTrip(trip);
-            return View("Index");
+            return RedirectToAction("Index");
         }
         [HttpGet]
         public ActionResult Edit(int ID)
@@ -37,8 +41,8 @@ namespace logisticTracker.Web.Controllers
         public ActionResult Edit(Trip trip)
         {
             TripsService.UpdateTrip(trip);
-            return View("Index");
-        }
+            return RedirectToAction("Index");
+		}
         [HttpGet]
         public ActionResult Delete(int ID)
         {
@@ -49,8 +53,8 @@ namespace logisticTracker.Web.Controllers
         public ActionResult Delete(Trip trip)
         {
             TripsService.DeleteTrip(trip);
-            return View("Index");
-        }
+            return RedirectToAction("Index");
+		}
 
     }
 }

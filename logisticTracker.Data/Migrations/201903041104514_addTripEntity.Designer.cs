@@ -7,13 +7,13 @@ namespace logisticTracker.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class addedTripEntity : IMigrationMetadata
+    public sealed partial class addTripEntity : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(addedTripEntity));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(addTripEntity));
         
         string IMigrationMetadata.Id
         {
-            get { return "201903032043467_added-TripEntity"; }
+            get { return "201903041104514_addTripEntity"; }
         }
         
         string IMigrationMetadata.Source

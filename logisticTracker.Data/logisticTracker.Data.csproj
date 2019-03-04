@@ -49,9 +49,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LogisticTrackerDataContext.cs" />
-    <Compile Include="Migrations\201903032043467_added-TripEntity.cs" />
-    <Compile Include="Migrations\201903032043467_added-TripEntity.Designer.cs">
-      <DependentUpon>201903032043467_added-TripEntity.cs</DependentUpon>
+    <Compile Include="Migrations\201903041104514_addTripEntity.cs" />
+    <Compile Include="Migrations\201903041104514_addTripEntity.Designer.cs">
+      <DependentUpon>201903041104514_addTripEntity.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -67,8 +67,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201903032043467_added-TripEntity.resx">
-      <DependentUpon>201903032043467_added-TripEntity.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201903041104514_addTripEntity.resx">
+      <DependentUpon>201903041104514_addTripEntity.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
